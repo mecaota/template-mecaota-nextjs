@@ -1,0 +1,53 @@
+{
+  "dependencies": {
+    "@linaria/core": "7.0.0",
+    "@linaria/react": "7.0.1",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "react-router-dom": "7.14.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.12",
+    "@linaria/atomic": "7.0.1",
+    "@storybook/addon-a11y": "10.3.5",
+    "@storybook/addon-docs": "10.3.5",
+    "@storybook/builder-vite": "10.3.5",
+    "@storybook/react": "10.3.5",
+    "@storybook/react-vite": "10.3.5",
+    "@types/node": "25.6.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.1",
+    "@vitest/browser-playwright": "4.1.4",
+    "@vitest/coverage-v8": "4.1.4",
+    "@wyw-in-js/vite": "1.0.9",
+    "date-fns": "4.1.0",
+    "lefthook": "2.1.6",
+    "playwright": "1.59.1",
+    "storybook": "10.3.5",
+    "typescript": "6.0.3",
+    "vite": "8.0.8",
+    "vite-tsconfig-paths": "6.1.1",
+    "vitest": "4.1.4"
+  },
+  "engines": {
+    "node": "24.15.0",
+    "npm": "please_use_bun_instead"
+  },
+  "name": "template-mecaota-frontend",
+  "scripts": {
+    "build": "tsc && vite build",
+    "build-storybook": "storybook build",
+    "dev": "vite",
+    "format": "biome check --write --unsafe",
+    "lint": "biome check",
+    "serve": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "test": "vitest run --passWithNoTests --sequence.concurrent --config vitest.config.ts",
+    "test-coverage": "vitest run --passWithNoTests --coverage --sequence.concurrent --config vitest.config.ts",
+    "test-e2e": "vitest run --passWithNoTests --sequence.concurrent --config vitest.e2e.config.ts",
+    "tsc": "tsc --noEmit"
+  },
+  "type": "module",
+  "version": "3.0.0"
+}

@@ -1,0 +1,12 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - name: format and lint
+      glob: "**/*"
+      run: bun run biome check --no-errors-on-unmatched  --write --unsafe --colors=off {staged_files}
+      stage_fixed: true
+pre-push:
+  parallel: true
+  jobs:
+    - name: type check
+      run: bun run tsc --noEmit
