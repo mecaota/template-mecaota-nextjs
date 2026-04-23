@@ -1,7 +1,5 @@
 {
   "dependencies": {
-    "@linaria/core": "7.0.0",
-    "@linaria/react": "7.0.1",
     "next": "16.2.4",
     "react": "19.2.5",
     "react-dom": "19.2.5",
@@ -9,7 +7,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.12",
-    "@linaria/atomic": "7.0.1",
     "@storybook/addon-a11y": "10.3.5",
     "@storybook/addon-docs": "10.3.5",
     "@storybook/builder-vite": "10.3.5",
