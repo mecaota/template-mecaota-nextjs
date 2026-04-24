@@ -183,7 +183,11 @@
     },
     {
       // テストコードでは多少ルールを緩和
-      "includes": ["**/*.spec.ts", "**/*.spec.tsx"],
+      "includes": [
+        "**/*.test.{js,ts,jsx,tsx}",
+        "**/*.e2e.{js,ts,jsx,tsx}",
+        "**/*.stories.{js,ts,jsx,tsx}"
+      ],
       "linter": {
         "rules": {
           "style": { "noMagicNumbers": "off" }

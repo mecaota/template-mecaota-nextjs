@@ -31,3 +31,4 @@ storybook-static
 .next
 next-env.d.ts
 tsconfig.tsbuildinfo
+vitest.shims.d.ts

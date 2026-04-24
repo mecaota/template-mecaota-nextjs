@@ -1,10 +1,10 @@
-import react from '@vitejs/plugin-react';
+import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
+import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import { playwright } from '@vitest/browser-playwright';
-import tsconfigPaths from 'vite-tsconfig-paths';
-import { defineConfig } from 'vitest/config';
+import { defineConfig, type Plugin } from 'vitest/config';
 
 export default defineConfig(() => ({
-  plugins: [react(), tsconfigPaths()],
+  plugins: [vanillaExtractPlugin() as Plugin[], storybookTest()],
   test: {
     browser: {
       enabled: true,
@@ -13,7 +13,5 @@ export default defineConfig(() => ({
       provider: playwright(),
       screenshotDirectory: '__screenshots__',
     },
-    include: ['**/*.e2e.{ts,tsx,js,jsx}'],
-    setupFiles: ['vitest.e2e.setup.ts'],
   },
 }));

@@ -1,8 +1,8 @@
-import tsconfigPaths from 'vite-tsconfig-paths';
-import { defineConfig } from 'vitest/config';
+import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
+import { defineConfig, type Plugin } from 'vitest/config';
 
 export default defineConfig(() => ({
-  plugins: [tsconfigPaths()],
+  plugins: [vanillaExtractPlugin() as Plugin[]],
   test: {
     coverage: {
       exclude: ['**/*.{d,stories}.{ts,tsx,js,jsx}', '**/*.config.{ts,js,cjs}'],
