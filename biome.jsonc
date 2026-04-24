@@ -160,6 +160,7 @@
       // pages, 設定ファイル、Storybook、Storyファイルではdefault exportとundeclaredVariablesを許可
       "includes": [
         "**/.storybook/{preview,main}.{js,ts,jsx,tsx}",
+        "**/{page,layout,route,default,not-found,error,sitemap}.{js,ts,jsx,tsx}",
         "**/*.config.{js,ts}",
         "**/*.stories.{js,ts,jsx,tsx}",
         "src/pages/**/*.{js,ts,jsx,tsx}"
