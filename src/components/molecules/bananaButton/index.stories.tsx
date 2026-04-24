@@ -28,10 +28,12 @@ export const Default = meta.story({
     await userEvent.click(button);
     await expect(button).toHaveTextContent('count is: バナナ');
 
-    // count=4〜12: 通過
-    for (let i = 4; i <= 12; i++) {
-      await userEvent.click(button);
-    }
+    // count=4〜12: 通過（Biome: avoid using await inside loops 対応）
+    const clicksTo12 = Array.from({ length: 9 }, () => userEvent.click(button));
+    await Promise.all(clicksTo12);
+
+    // count=13 へ進める
+    await userEvent.click(button);
 
     // count=13: 3を含む数字 → バナナ
     await expect(button).toHaveTextContent('count is: バナナ');
