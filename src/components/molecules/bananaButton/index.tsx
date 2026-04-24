@@ -1,6 +1,10 @@
+import { style } from '@vanilla-extract/css';
 import type { FC } from 'react';
 import { useMemo, useState } from 'react';
-import styles from './index.module.css';
+
+export const bananaButton = style({
+  padding: 10,
+});
 
 export const BananaButton: FC = () => {
   const [count, setCount] = useState(0);
@@ -15,7 +19,7 @@ export const BananaButton: FC = () => {
   return (
     <div>
       <button
-        className={styles.bananaButton}
+        className={bananaButton}
         onClick={() => setCount((count) => count + 1)}
         type="button"
       >
